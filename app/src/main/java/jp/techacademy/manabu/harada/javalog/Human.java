@@ -2,23 +2,17 @@ package jp.techacademy.manabu.harada.javalog;
 
 import android.util.Log;
 
-/**
- * Created by harada on 2016/10/02.
- */
-
-class Human extends Animal {
+class Human extends Animal implements Thinkable {
     // クラス変数
     static String to_jp = "人間";
+    private String hobby;
 
     // コンストラクタ
-    public Human(String name, int age) {
-        this.name = name;
-        this.age = age;
-
-    }
-
-   String hobby="政治";
-
+    public Human(String name, int age, String hobby) {
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+        }
 
     // クラス関数
     public static void introduce() {
@@ -26,13 +20,13 @@ class Human extends Animal {
     }
 
     // メンバ関数
-    public void say() {
+    @Override
+    public void say() { Log.d("javatest", "私の名前は"+this.name + "です。年は"+this.age + "歳です。" );
 
     }
     public void think(){
+
         Log.d("javatest", "私は"+hobby+"について考える");
-
     }
-
 
 }
