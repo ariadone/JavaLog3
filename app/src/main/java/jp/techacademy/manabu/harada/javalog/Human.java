@@ -1,5 +1,6 @@
 package jp.techacademy.manabu.harada.javalog;
 
+
 import android.util.Log;
 
 class Human extends Animal implements Thinkable {
